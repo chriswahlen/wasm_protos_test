@@ -1,8 +1,8 @@
 // @ts-check
 
-import Module from "../../main/hello-world-wasm/hello-world.js";
-import * as protos from "../proto_bundle.js";
-import { JsLib } from "./jslib/jslib.js";
+import Module from "./main/hello-world-wasm/hello-world.js";
+import * as protos from "./proto_bundle.js";
+import { JsLib } from "./web/javascript/jslib/jslib.js";
 
 
 // @ts-ignore

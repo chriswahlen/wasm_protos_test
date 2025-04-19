@@ -2,7 +2,7 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 git_repository(
   name = "wasm_protos",
   remote = "https://github.com/chriswahlen/wasm_protos.git",
-  commit = "d13b1de6834e779d1a84166366819fc5ddb04137"
+  commit = "ce42db6b36b658633fe1bcb317aec2d1d27123ac"
 )
 
 git_repository(

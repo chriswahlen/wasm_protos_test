@@ -13,6 +13,10 @@ js_proto_bundle(
     "//main/protos_a:protos_a",
     "//main/protos_b:protos_b",
   ],
+  export_names = [
+    "protos_a.js",
+    "protos_b.js",
+  ],
   bundle_name = "proto_bundle.js",
   visibility = ["//web:__pkg__"],
 )
@@ -21,12 +25,17 @@ filegroup(
   name = "web_bundle",
   srcs = [
     "hello.html",
-    "javascript/main.js",
+    "main.js",
   ],
 )
 
 copy_bundle(
   name = "copy_web_bundle",
+  local_srcs = [
+    ":web_bundle",
+    ":proto_bundle",
+    ":protobuf_js",
+  ],
   srcs = [
     ":web_bundle",
     ":proto_bundle",
