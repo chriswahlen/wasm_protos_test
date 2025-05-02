@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package protos_b;
+package protos_b_pkg;
 
 import "main/protos_a/hello.proto";
 
 message GoodbyeProto {
   string adios = 1;
 
-  protos_a.HelloProto greeting = 2;
+  protos_a_pkg.HelloProto greeting = 2;
 }

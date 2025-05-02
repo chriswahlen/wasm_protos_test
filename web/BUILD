@@ -14,8 +14,9 @@ js_proto_bundle(
     "//main/protos_b:protos_b",
   ],
   export_names = [
-    "protos_a.js",
-    "protos_b.js",
+    # The protobuf build creates exports based on the package name.
+    "protos_a_pkg.js",
+    "protos_b_pkg.js",
   ],
   bundle_name = "proto_bundle.js",
   visibility = ["//web:__pkg__"],

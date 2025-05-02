@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package protos_a;
+package protos_a_pkg;
 
 message HelloProto {
   string greeting = 1;

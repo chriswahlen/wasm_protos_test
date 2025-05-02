@@ -14,14 +14,14 @@ extern "C" {
   // Returns a malloc'd pointer, so the caller is responsible for freeing it.
   EMSCRIPTEN_KEEPALIVE
   uint8_t* handle_greeting(uint8_t* data, int in_len, int* out_len) {
-    protos_a::HelloProto hello_msg;
+    protos_a_pkg::HelloProto hello_msg;
     if (hello_msg.ParseFromArray(data, in_len)) {
       std::cout << "From JS: " << hello_msg.greeting() << std::endl;
     } else {
       std::cerr << "Failed to parse message from JS" << std::endl;
     }
 
-    protos_b::GoodbyeProto goodbye_msg;
+    protos_b_pkg::GoodbyeProto goodbye_msg;
     goodbye_msg.set_adios("Goodbye from C++!");
     *goodbye_msg.mutable_greeting() = hello_msg;
     static std::string serialized;
